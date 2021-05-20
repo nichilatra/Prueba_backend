@@ -24,13 +24,13 @@ class CommentController {
         return res.send(deleteComment);
     }
 
-    async getIdeasComments(req, res) {
+    async getIdeaComments(req, res) {
         const { ideaId } = req .params;
-        const comments = await _commentService.getIdeasComments(ideaId);
+        const comments = await _commentService.getIdeaComments(ideaId);
         return res.send(comments);
     }
 
-    async createComments(req, res) {
+    async createComment(req, res) {
         const { body } = req;
         const { ideaId } = req.params;
         const createdComment = await _commentService.createdComment(body, ideaId);

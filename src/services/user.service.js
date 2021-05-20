@@ -3,7 +3,7 @@ let _userRepository = null;
 
 class UserService extends BaseService {
     constructor({ UserRepository }) {
-        super(userRepository);
+        super(UserRepository);
         _userRepository = UserRepository;
     }
 
